@@ -47,3 +47,11 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+#ignore csv and xlsx
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.csv
+*.xlsx
