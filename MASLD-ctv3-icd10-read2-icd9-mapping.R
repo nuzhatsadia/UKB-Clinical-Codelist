@@ -74,7 +74,7 @@ masld_ctv3_combined <- full_join(verify, masld_ctv3_os,
 
 # View the final comprehensive list
 View(masld_ctv3_combined)
-write_csv(masld_ctv3_combined, "nuzhatsadia-nafldmasld-ctv3-combined_mapping.csv")
+write_csv(masld_ctv3_combined, "nafldmasld-ctv3-combined_mapping.csv")
 
 ###Aim:create read2 codelist by mapping with icd10 code
 #importing the master lookup file to map read2 to ICD10
