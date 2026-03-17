@@ -49,6 +49,7 @@ verify <- merged_data %>%
   select(read_code, icd10_code, term)
 
 View(verify)
+
 #after matching the icd10 codes with the CTV3 codes from "ctv3_icd10_map" dataset, 
 #row count for "masld_ctv3_os" doesn't match with "verify" dataset
 #so there might be some of the CTV3 codes from verify dataset that are not present 
