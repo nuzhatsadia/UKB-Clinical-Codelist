@@ -6,7 +6,7 @@ source("R_packages.R")
 # Read the CTV3 lookup sheet from the all lookup map file
 ctv3 <- read_excel("all_lkps_maps_v4.xlsx", sheet = "read_ctv3_lkp")
 
-#importing the opensafely codelist file for MASLD using CTV3 code
+#importing the opensafely codelist file for hepatitis using CTV3 code
 hepatitis_ctv3_os <- read_csv(file = "Viral_Hepatitis-ctv3-opensafely.csv", col_names = TRUE)
 
 # Create the merged dataset
@@ -52,11 +52,11 @@ verify <- merged_data %>%
 #in the opensafely prepared codelist and vice versa
 #let's find the mismatches between the "hepatitis_ctv3_os" and "verify" dataset
 
-# Codes in verify that are missing from masld_ctv3_os
+# Codes in verify that are missing from hepatitis_ctv3_os
 only_in_verify <- verify %>%
   anti_join(hepatitis_ctv3_os, by = c("read_code" = "code"))
 
-# Codes in masld_ctv3_os that are missing from verify
+# Codes in hepatitis_ctv3_os that are missing from verify
 only_in_os <- hepatitis_ctv3_os %>%
   anti_join(verify, by = c("code" = "read_code"))
 
