@@ -34,7 +34,7 @@ check <- verification_check %>%
 #importing the master lookup file to map CTV3 to ICD10
 ctv3_icd10_map <- read_excel("all_lkps_maps_v4.xlsx", sheet = "read_ctv3_icd10")
 
-#importing the opensafely codelist file for Hepatitis using ICD10 code
+#importing the opensafely codelist file for Dyslipidemia using ICD10 code
 dlp_icd_os <- read_csv(file = "Dyslipidemia-icd10-opensafely.csv", col_names = TRUE)
 
 #Merging the opensafely ICD10 codes with  CTV3 to ICD10 map dataset
